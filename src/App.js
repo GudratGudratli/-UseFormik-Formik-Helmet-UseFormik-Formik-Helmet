@@ -15,7 +15,8 @@ export default function App() {
           about: "",
           phoneNumber: "",
         }}
-        onSubmit={(values) => {
+        onSubmit={(values) =>
+          {
           setData((prevState) => [...prevState,values])
         }}
       >
@@ -33,14 +34,14 @@ export default function App() {
 
       {
         <ol>
-          {data.map((element, index) => {
+          {data.map((el, index) => {
             return (
               <li key={index}>
-                <p>Username: {element.username}</p>
-                <p>Password: {element.password}</p>
-                <p>Email: {element.email}</p>
-                <p>About: {element.about}</p>
-                <p>Phone: {element.phoneNumber}</p>
+                <p>Username: {el.username}</p>
+                <p>Password: {el.password}</p>
+                <p>Email: {el.email}</p>
+                <p>About: {el.about}</p>
+                <p>Phone: {el.phoneNumber}</p>
               </li>
             )
           })}
